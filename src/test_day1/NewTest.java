@@ -3,18 +3,19 @@ package test_day1;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class NewTest {
 	WebDriver driver;
   @BeforeMethod
   public void beforeMethod() {
 	  //khai bao duong dan test tren trinh duyet nao	  
-	  System.setProperty("webdriver.gecko.driver","d:\\software\\geckodriver-firefox.exe");
+	  System.setProperty("webdriver.chrome.driver","d:\\software\\chromedriver1.exe");
 	  
 	  //khai bao drive	  
-	  driver = new FirefoxDriver();
+	  driver = new ChromeDriver();
 	  
 	  //run
 	  driver.get("https://github.com/AnhTaQA");
